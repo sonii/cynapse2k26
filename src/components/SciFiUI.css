@@ -1,0 +1,127 @@
+/* SciFi UI Color Variables */
+.scifi-ui {
+  --scifi-teal: #59b29e;
+  --scifi-teal2: #00ffc3;
+  --scifi-red: #f63b4c;
+  --scifi-light: #afe3d7;
+  --scifi-dark: #0f0026;
+}
+
+/* Fill utilities for SVG */
+.fill-scifi-teal {
+  fill: var(--scifi-teal);
+}
+
+/* Background colors */
+.bg-scifi-red {
+  background-color: var(--scifi-red);
+}
+
+.bg-scifi-teal {
+  background-color: var(--scifi-teal);
+}
+
+.bg-scifi-teal2 {
+  background-color: var(--scifi-teal2);
+}
+
+.bg-scifi-light {
+  background-color: var(--scifi-light);
+}
+
+/* Border colors */
+.border-scifi-teal {
+  border-color: var(--scifi-teal);
+}
+
+.border-scifi-red {
+  border-color: var(--scifi-red);
+}
+
+.border-t-scifi-red {
+  border-top-color: var(--scifi-red);
+}
+
+.border-b-scifi-red {
+  border-bottom-color: var(--scifi-red);
+}
+
+.border-l-scifi-red {
+  border-left-color: var(--scifi-red);
+}
+
+.border-r-scifi-red {
+  border-right-color: var(--scifi-red);
+}
+
+/* Text colors */
+.text-scifi-light {
+  color: var(--scifi-light);
+}
+
+.text-scifi-teal2 {
+  color: var(--scifi-teal2);
+}
+
+/* Animations */
+@keyframes scifi-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.scifi-blink {
+  animation: scifi-blink 0.1s linear infinite;
+}
+
+/* Glow effects */
+.scifi-glow-teal {
+  box-shadow: 0 0 10px var(--scifi-teal2);
+}
+
+.scifi-text-glow {
+  text-shadow: 0 0 10px var(--scifi-teal2);
+}
+
+/* Opacity utilities for scifi colors */
+.bg-scifi-teal\/30 {
+  background-color: rgba(89, 178, 158, 0.3);
+}
+
+.bg-scifi-light\/10 {
+  background-color: rgba(175, 227, 215, 0.1);
+}
+
+.bg-scifi-light\/50 {
+  background-color: rgba(175, 227, 215, 0.5);
+}
+
+/* Scanline effect */
+.scifi-scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 2px,
+    rgba(175, 227, 215, 0.02) 2px,
+    rgba(175, 227, 215, 0.02) 4px
+  );
+  pointer-events: none;
+}
+
+/* Pulse animation for elements */
+@keyframes scifi-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.scifi-pulse {
+  animation: scifi-pulse 2s ease-in-out infinite;
+}
