@@ -4,10 +4,25 @@ import { useRef } from "react";
 import { Instagram, Mail } from "lucide-react";
 import rithuparanPhoto from "@/assets/rithuparan.jpeg";
 import akilaPhoto from "@/assets/akila.jpg";
+import presidentPhoto from "@/assets/president.png";
+import vicePresidentPhoto from "@/assets/vice-president.png";
 
 const Footer = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-40px" });
+
+  const leadership = [
+    {
+      name: "A SRI PRANAV",
+      photo: presidentPhoto,
+      role: "PRESIDENT"
+    },
+    {
+      name: "DHARANI P",
+      photo: vicePresidentPhoto,
+      role: "VICE PRESIDENT"
+    }
+  ];
 
   const organizers = [
     {
@@ -63,6 +78,59 @@ const Footer = () => {
           <p className="font-body text-muted-foreground mb-8 max-w-md mx-auto">
             If you have any queries, feel free to ask our respective event organizers.
           </p>
+
+          <div className="mb-12">
+            <motion.h4
+              className="font-display text-2xl font-bold tracking-wide mb-6"
+              initial={{ opacity: 0, y: 5 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.12, delay: 0.02 }}
+            >
+              Leadership / Organizing Committee
+            </motion.h4>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+              {leadership.map((leader, index) => (
+                <motion.div
+                  key={leader.role}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 0.12,
+                    delay: index * 0.03,
+                    ease: "easeOut"
+                  }}
+                  whileHover={{ y: -3, transition: { duration: 0.08 } }}
+                  className="group"
+                >
+                  <motion.div className="card-event rounded-2xl p-6 sm:p-8 h-full flex flex-col relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-80" />
+                    <div className="absolute inset-0 rounded-2xl border border-primary/30 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-80" />
+
+                    <div className="mb-4 relative z-10">
+                      <span className="inline-block px-3 py-1 rounded-full text-xs font-body font-medium tracking-wide uppercase badge-technical">
+                        {leader.role}
+                      </span>
+                    </div>
+
+                    <div className="mb-4 relative z-10 flex justify-center">
+                      <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-primary/40">
+                        <img
+                          src={leader.photo}
+                          alt={leader.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+
+                    <h3 className="font-display text-xl sm:text-2xl font-bold mb-2 tracking-wide text-center">
+                      {leader.name}
+                    </h3>
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-10 max-w-4xl mx-auto">
             {organizers.map((organizer, index) => (
