@@ -29,13 +29,14 @@ const Footer = () => {
       name: "RITHUPARAN P S",
       photo: rithuparanPhoto,
       role: "Event Coordinator",
-      mail: "230318.cs@rmkec.ac.in"
+      mail: "231006.cs@rmkec.ac.in"
+      
     },
     {
       name: "AKILA DEVADHARSHINI K",
       photo: akilaPhoto,
       role: "Event Coordinator",
-      mail: "231006.cs@rmkec.ac.in"
+      mail: "230318.cs@rmkec.ac.in"
     }
   ];
 
