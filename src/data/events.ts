@@ -26,7 +26,7 @@ export const events: Event[] = [
     overview: "Compendium is a premier paper presentation event that brings together inquisitive minds to showcase innovative research, novel concepts, and emerging ideas. The event provides a platform for participants to articulate their work, engage in intellectual discussions, and gain insights through scholarly interaction.",
     requirements: [
       "Eligibility: Open to students pursuing UG and PG",
-      "Team Size: 2–4 members per team",
+      "Team Size: 3 members per team",
       "Presentation Time: 8-10 minutes per team, followed by a Q&A session",
       "Abstract Submission: Required during registration. Only selected participants can present",
       "File Format: Research paper in PDF format and a PPT with 8-10 slides",
