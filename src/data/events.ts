@@ -29,7 +29,7 @@ export const events: Event[] = [
       "Team Size: 3 members per team",
       "Presentation Time: 8-10 minutes per team, followed by a Q&A session",
       "Abstract Submission: Required during registration. Only selected participants can present",
-      "File Format: Research paper in PDF format and a PPT with 8-10 slides",
+      "File Format: PPT with 8-10 slides",
       "Participants must bring laptops, power adapters, and extension cords"
     ],
     contacts: [
